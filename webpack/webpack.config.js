@@ -24,6 +24,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [{loader: 'expose-loader', options: 'Project'}, {loader: 'ts-loader'}]
             },
+            {test: /jquery\.js$/, loader: 'expose-loader?jQuery!expose-loader?$'},
         ]
     }
 };

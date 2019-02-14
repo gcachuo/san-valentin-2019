@@ -3,3 +3,5 @@
 /platforms/
 /webpack/node_modules/
 /www/js/
+/webpack/package-lock.json
+/package-lock.json

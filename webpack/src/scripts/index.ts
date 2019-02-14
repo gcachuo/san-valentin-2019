@@ -1,2 +1,2 @@
-export * from './app/app';
-export * from './dashboard/index';
+export * from './app';
+export * from './dashboard';
