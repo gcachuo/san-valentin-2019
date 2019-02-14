@@ -1,1 +1,2 @@
-import './styles/app.scss';
+require('./styles/app.scss');
+require('./scripts/index');
