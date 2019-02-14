@@ -1,0 +1,21 @@
+{
+  "name": "sanvalentin2019",
+  "version": "0.0.0",
+  "scripts": {
+    "webpack": "cd webpack && npm install && npm run build",
+    "cordova": "cordova prepare && cordova build browser",
+    "postinstall": "npm run webpack && npm run cordova",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cordova": "^8.1.2",
+    "cordova-browser": "^5.0.4"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {}
+  }
+}
