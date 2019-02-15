@@ -6,22 +6,6 @@
 </div>
 <script>
     $(function () {
-        new Project.Dashboard();
-        showContent(1);
+        Project.Dashboard.showContent(1);
     });
-
-    async function showContent(page) {
-        try {
-            $("#story-content p").hide();
-            $("#story-content footer").hide();
-
-            const content = await $.ajax({url: 'pages/content.json'});
-            const text = content[page].text;
-            await $("#story-content p").html(text).fadeIn(2000).promise();
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            await $("#story-content footer").html(`<button onclick="showContent(${page + 1})" class="col-4 offset-4 btn btn-block btn-primary">OK</button>`).fadeIn(2000).promise();
-        } catch (e) {
-            Project.App.toast({type: 'danger', message: 'Oops, algo salió mal.', duration: 1000});
-        }
-    }
 </script>

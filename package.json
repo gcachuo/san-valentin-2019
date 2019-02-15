@@ -8,7 +8,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "cordova": "^8.1.2",
     "cordova-browser": "^5.0.4"
   },
   "cordova": {

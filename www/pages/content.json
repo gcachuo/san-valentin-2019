@@ -1,14 +1,45 @@
 {
   "1": {
     "text": "Hola, esta es una pequeña historia que te quiero contar, ayúdame a elegir las palabras que más te parezcan adecuadas.",
-    "buttons": {
-      "text": "OK2"
-    }
+    "buttons": [
+      {
+        "text": "Esta bien!"
+      }
+    ]
   },
   "2": {
-    "text": "Había una vez una niña muy bonita llamada Abril, tenia puesto un vestido color morado muy elegante que combinaba con sus ojos."
+    "text": "Había una vez una niña muy bonita llamada Abril, tenia puesto un vestido color morado muy elegante que combinaba con sus ojos.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
   },
   "3": {
-    "text": "Estaba en la fiesta de graduación de su mejor amiga y estaba pasándola muy tranquilo."
+    "text": "Estaba en la fiesta de graduación de su mejor amiga y estaba pasándola muy tranquilo.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
+  },
+  "4": {
+    "text": "A lo lejos ve a un muchacho muy apuesto llamado Memo que estaba platicando en la mesa con los hermanos de su mejor amiga. Acercándose mas vio que estaban jugando con los panes y estaban muy divertidos y al ver que se acercaba Memo le empezó a sacar platica.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
+  },
+  "5": {
+    "text": "Hola! yo soy Memo, estamos jugando a quitarnos los panes, quieres jugar con nosotros?",
+    "buttons": [
+      {
+        "text": "Yo no juego a ese tipo de cosas, que raro eres."
+      },
+      {
+        "text": "Hola yo soy Abril, mucho gusto. Claro, ¿como se juega?"
+      }
+    ]
   }
 }
