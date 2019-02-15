@@ -33,6 +33,7 @@ export class App {
             $(".app").html(rendered);
             App.setCookie('page', file, 1);
             new App();
+            $("body").removeClass().addClass(file);
         }, 'html');
     }
 
