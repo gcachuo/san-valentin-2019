@@ -1,27 +1,48 @@
 import {App} from "./app";
 
 export class Dashboard {
-    constructor() {
+    private page: number;
+
+    constructor(page: number) {
+        this.page = page;
     }
 
-    static async showContent(page: number) {
+    static nextPage(page: number, options?: { page: number, navigate: string }) {
+        const navigate = options ? options.navigate : false;
+        page = options ? options.page : page + 1;
+        if (!navigate) {
+            const dashboard = new Dashboard(page);
+            dashboard.showContent();
+        } else {
+            App.navigate(navigate);
+        }
+    }
+
+    async showContent() {
         try {
-            const $p=$("#story-content p");
-            const $footer=$("#story-content footer");
+            const timer = 1;
+            const page = this.page;
+            const $p = $("#story-content p");
+            const $footer = $("#story-content footer");
 
             $p.hide();
             $footer.hide();
 
             const content = await $.ajax({url: 'pages/content.json'});
             const text = content[page].text;
-            await $p.html(text).fadeIn(2000).promise();
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            await $p.html(text).fadeIn(timer).promise();
+            await new Promise(resolve => setTimeout(resolve, timer));
 
             $footer.html('');
-            $.each(content[page].buttons,function(key,button){
-                $footer.append(`<button onclick="Project.Dashboard.showContent(${page + 1})" class="btn btn-block btn-primary">${button.text}</button>`);
+            $.each(content[page].buttons, function (key, button) {
+                const $HTMLbutton = $(`<button class="btn btn-block btn-outline-primary">${button.text}</button>`).on('click', function () {
+                    Dashboard.nextPage(page, button.options);
+                });
+                $footer.append($HTMLbutton);
             });
-            await $footer.fadeIn(2000).promise();
+            await $footer.fadeIn(timer).promise();
+
+            this.page = page;
         } catch (e) {
             App.toast({type: 'danger', message: 'Oops, algo salió mal.', duration: 1000});
         }
