@@ -3,6 +3,6 @@
     <name>SV2019</name>
     <description>GCOxASGG</description>
     <author email="guillermocachu06@gmail.com">Guillermo Cachú Osorio</author>
-    <engine name="android" />
     <engine name="browser" spec="^5.0.4" />
+    <engine name="android" spec="^7.0.0" />
 </widget>
