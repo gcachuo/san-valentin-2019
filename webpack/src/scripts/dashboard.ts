@@ -9,7 +9,7 @@ export class Dashboard {
 
     static nextPage(page: number, options?: { page: number, navigate: string }) {
         const navigate = options ? options.navigate : false;
-        page = options ? options.page : page + 1;
+        page = options ? options.page : ++page;
         if (!navigate) {
             const dashboard = new Dashboard(page);
             dashboard.showContent();
@@ -44,7 +44,7 @@ export class Dashboard {
 
             this.page = page;
         } catch (e) {
-            App.toast({type: 'danger', message: 'Oops, algo salió mal.', duration: 1000});
+            console.error(e);
         }
     }
 }
