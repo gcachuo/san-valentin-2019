@@ -29,13 +29,18 @@ export class Dashboard {
             $footer.hide();
 
             const content = await $.ajax({url: 'pages/content.json'});
-            const text = content[page].text;
-            await $p.html(text).fadeIn(timer).promise();
+            const text = this.replaceWords(content[page].text);
+
+            $p.html(text);
+
+            await $p.fadeIn(timer).promise();
             await new Promise(resolve => setTimeout(resolve, timer));
 
             $footer.html('');
-            $.each(content[page].buttons, function (key, button) {
-                const $HTMLbutton = $(`<button class="btn btn-block btn-outline-primary">${button.text}</button>`).on('click', function () {
+            $.each(content[page].buttons, (key, button) => {
+                const text = this.replaceWords(button.text);
+
+                const $HTMLbutton = $(`<button class="btn btn-block btn-outline-primary">${text}</button>`).on('click', function () {
                     Dashboard.nextPage(page, button.options);
                 });
                 $footer.append($HTMLbutton);
@@ -46,5 +51,13 @@ export class Dashboard {
         } catch (e) {
             console.error(e);
         }
+    }
+
+    replaceWords(text: string) {
+        $.each(localStorage, function (key, value) {
+            const regex = `##(${key})##`;
+            text = text.replace(new RegExp(regex, "g"), value);
+        });
+        return text;
     }
 }
