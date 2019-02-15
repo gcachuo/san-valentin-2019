@@ -24,6 +24,7 @@ export class Dashboard {
             const timer = 2000;
             const page = this.page;
             const $p = $("#story-content p");
+            const $img = $("#story-content img");
             const $footer = $("#story-content footer");
 
             $p.hide();
@@ -35,6 +36,12 @@ export class Dashboard {
 
             await $p.fadeIn(timer).promise();
             await new Promise(resolve => setTimeout(resolve, timer));
+
+            if (content[page].img) {
+                $img.attr('src', content[page].img);
+                await $img.fadeIn(timer).promise();
+                await new Promise(resolve => setTimeout(resolve, timer));
+            }
 
             $footer.html('');
             $.each(content[page].buttons, (key, button) => {

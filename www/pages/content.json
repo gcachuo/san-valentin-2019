@@ -35,7 +35,7 @@
     ]
   },
   "5": {
-    "text": "'Hola! soy ##NOMBRE2##, estamos jugando a robar ##SUSTANTIVO## entre nosotros, quieres jugar?' pregunta el ##HOMBRE##.",
+    "text": "'Hola! soy ##NOMBRE2##, estamos jugando a robar ##SUSTANTIVO## entre nosotros, ¿quieres jugar?' pregunta el ##HOMBRE##.",
     "buttons": [
       {
         "text": "Yo no juego a ese tipo de cosas, que raro eres.",
@@ -72,6 +72,7 @@
   },
   "8": {
     "text": "El tiempo empezó a correr y sin que se dieran cuenta ya estaban ##VERBO## al compás de la música, y aunque ##NOMBRE2## no sabia como hacerlo, a ##NOMBRE1## eso no le importaba. Fin.",
+    "img": "img/memoyabril.jpg",
     "buttons": [
       {
         "text": "Volver a empezar.",
