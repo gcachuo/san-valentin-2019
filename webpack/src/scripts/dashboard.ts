@@ -20,7 +20,7 @@ export class Dashboard {
 
     async showContent() {
         try {
-            const timer = 1;
+            const timer = 2000;
             const page = this.page;
             const $p = $("#story-content p");
             const $footer = $("#story-content footer");
