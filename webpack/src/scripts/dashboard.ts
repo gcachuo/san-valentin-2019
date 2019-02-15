@@ -5,6 +5,7 @@ export class Dashboard {
 
     constructor(page: number) {
         this.page = page;
+        this.showContent();
     }
 
     static nextPage(page: number, options?: { page: number, navigate: string }) {
@@ -28,9 +29,8 @@ export class Dashboard {
             $p.hide();
             $footer.hide();
 
-            const content = await $.ajax({url: 'pages/content.json'});
+            const content = await $.getJSON('pages/content.json');
             const text = this.replaceWords(content[page].text);
-
             $p.html(text);
 
             await $p.fadeIn(timer).promise();

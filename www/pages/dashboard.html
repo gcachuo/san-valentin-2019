@@ -7,7 +7,6 @@
 <script>
     $(function () {
         const page = '{{#page}}{{.}}{{/page}}{{^page}}1{{/page}}';
-        const dashboard = new Project.Dashboard(page);
-        dashboard.showContent();
+        new Project.Dashboard(page);
     });
 </script>
