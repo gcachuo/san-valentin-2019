@@ -1,0 +1,85 @@
+{
+  "1": {
+    "text": "Hola, esta es una pequeña historia que te quiero contar, ayúdame a elegir las palabras que más te parezcan adecuadas.",
+    "buttons": [
+      {
+        "text": "Esta bien!",
+        "options": {
+          "navigate": "fields"
+        }
+      }
+    ]
+  },
+  "2": {
+    "text": "Había una vez una niña muy ##ADJETIVO1## llamada ##NOMBRE1##, tenia puesto un vestido color ##COLOR## muy elegante que combinaba con sus ojos.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
+  },
+  "3": {
+    "text": "Estaba en la fiesta de graduación de su mejor amiga y estaba pasándola muy ##ADJETIVO2##.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
+  },
+  "4": {
+    "text": "A lo lejos ve a un ##HOMBRE## muy ##ADJETIVO3## llamado ##NOMBRE2## que estaba platicando en la mesa con los hermanos de su mejor amiga. Acercándose más vio que estaban jugando con ##SUSTANTIVO## y estaban muy ##ADJETIVO4## y al ver que se acercaba ##NOMBRE2## le empezó a sacar platica.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
+  },
+  "5": {
+    "text": "'Hola! soy ##NOMBRE2##, estamos jugando a robar ##SUSTANTIVO## entre nosotros, ¿quieres jugar?' pregunta el ##HOMBRE##.",
+    "buttons": [
+      {
+        "text": "Yo no juego a ese tipo de cosas, que raro eres.",
+        "options": {
+          "page": 6
+        }
+      },
+      {
+        "text": "Hola yo soy ##NOMBRE1##, mucho gusto. Claro, ¿como se juega?",
+        "options": {
+          "page": 7
+        }
+      }
+    ]
+  },
+  "6": {
+    "text": "'Si, no te apures.' dice ##NOMBRE2## que te ve con tristeza y se voltea para seguir jugando con los hermanos. Fin.",
+    "buttons": [
+      {
+        "text": "Volver a empezar.",
+        "options": {
+          "page": 1
+        }
+      }
+    ]
+  },
+  "7": {
+    "text": "'Va que va. Consiste en agarrar los ##SUSTANTIVO## y tratar de evitar que te los roben, quien tenga más será el ganador.' te dice ##NOMBRE2## con ##SENTIMIENTO##.",
+    "buttons": [
+      {
+        "text": "Siguiente pagina"
+      }
+    ]
+  },
+  "8": {
+    "text": "El tiempo empezó a correr y sin que se dieran cuenta ya estaban ##VERBO## al compás de la música, y aunque ##NOMBRE2## no sabia como hacerlo, a ##NOMBRE1## eso no le importaba. Fin.",
+    "img": "img/memoyabril.jpg",
+    "buttons": [
+      {
+        "text": "Volver a empezar.",
+        "options": {
+          "page": 1
+        }
+      }
+    ]
+  }
+}

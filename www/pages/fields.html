@@ -1,0 +1,54 @@
+<form>
+    <label>Llena los siguientes campos.</label>
+    <div class="form-group">
+        <input name="NOMBRE1" type="text" class="form-control" placeholder="Nombre (propio, femenino)">
+    </div>
+    <div class="form-group">
+        <input name="NOMBRE2" type="text" class="form-control" placeholder="Nombre (propio, masculino)">
+    </div>
+    <div class="form-group">
+        <input name="ADJETIVO1" type="text" class="form-control text-lowercase" placeholder="Adjetivo (femenino)">
+    </div>
+    <div class="form-group">
+        <input name="COLOR" type="text" class="form-control text-lowercase" placeholder="Color favorito">
+    </div>
+    <div class="form-group">
+        <input name="ADJETIVO2" type="text" class="form-control text-lowercase" placeholder="Adjetivo (singular)">
+    </div>
+    <div class="form-group">
+        <input name="HOMBRE" type="text" class="form-control text-lowercase" placeholder="Sinónimo de Hombre">
+    </div>
+    <div class="form-group">
+        <input name="ADJETIVO3" type="text" class="form-control text-lowercase" placeholder="Adjetivo (masculino)">
+    </div>
+    <div class="form-group">
+        <input name="SUSTANTIVO" type="text" class="form-control text-lowercase" placeholder="Sustantivo (plural, masculino)">
+    </div>
+    <div class="form-group">
+        <input name="ADJETIVO4" type="text" class="form-control text-lowercase" placeholder="Adjetivo (plural, masculino)">
+    </div>
+    <div class="form-group">
+        <input name="VERBO" type="text" class="form-control text-lowercase" placeholder="Verbo (Presente continuo)">
+    </div>
+    <div class="form-group">
+        <input name="SENTIMIENTO" type="text" class="form-control text-lowercase" placeholder="Sentimiento">
+    </div>
+    <button class="btn btn-success btn-block" type="button">Todo bien!</button>
+</form>
+<script>
+    localStorage.clear();
+    $('button').on('click', function () {
+        let validate = true;
+        $.each($('form input'), function () {
+            if (!$(this).val()) {
+                alert('Llena todos los campos');
+                validate = false;
+                return false;
+            }
+            localStorage.setItem($(this).attr('name'), $(this).val());
+        });
+        if (validate) {
+            Project.App.navigate('dashboard', {page: 2});
+        }
+    });
+</script>
